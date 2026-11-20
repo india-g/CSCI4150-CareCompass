@@ -1,0 +1,19 @@
+[project]
+name = "carecompass"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "gavin-c-l", email = "landrg@rpi.edu" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.165.0",
+]
+
+[project.scripts]
+carecompass = "carecompass:main"
+
+[build-system]
+requires = ["uv_build>=0.13.9,<0.14.0"]
+build-backend = "uv_build"
