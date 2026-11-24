@@ -5,15 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CareCompass</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="script.js" defer></script>
 </head>
-<body>
-    <h1>CareCompass</h1>
-    <form>
-        <input type="text" id="mainInput" placeholder="How are you feeling?">
-        <button id="submitButton">Submit</button>
+<body class="min-h-screen">
+
+    <!-- Header -->
+    <header class="flex flex-col items-center pt-10 pb-4">
+        <h1 class="text-5xl font-semibold text-center arimo">CareCompass</h1>
+        <img src="resources/cc_logo_v2.png" alt="CareCompass logo" class="mt-4 h-60 w-60 object-contain">
+    </header>
+
+    <!-- Chat area (bottom padding leaves room for the fixed input bar) -->
+    <div id="responseContainer" class="mx-auto flex w-full max-w-2xl flex-col gap-3 px-4 pb-28">
+    </div>
+
+    <!-- Input bar pinned to bottom -->
+    <form class="fixed inset-x-0 bottom-0 bg-gray-50/90 backdrop-blur px-4 py-4">
+        <div class="mx-auto flex max-w-2xl items-center gap-2 rounded-full border border-gray-300 bg-white py-2 pl-5 pr-2 shadow-sm focus-within:ring-2 focus-within:ring-blue-500">
+            <input type="text" id="mainInput" placeholder="How are you feeling?"
+                   class="flex-1 bg-transparent outline-none placeholder-gray-400">
+            <button id="submitButton"
+                    class="rounded-full bg-blue-500 px-5 py-2 font-medium text-white hover:bg-blue-600">
+                Submit
+            </button>
+        </div>
     </form>
-    
-    <div id="responseContainer"></div>
+
 </body>
 </html>
