@@ -2,3 +2,6 @@
 __pycache__/
 *.pyc
 .env
+# datasets
+data/otc_drugs.jason
+data/*.tmp
